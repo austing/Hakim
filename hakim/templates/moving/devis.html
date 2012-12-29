@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Démenagement particulier: Demande de devis</title>
+
+{% load adminmedia %}
+
+<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css"/>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css"/>
+<link rel="stylesheet" type="text/css" href="/static/admin/css/widgets.css"/>
+
+<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+
+{{ contact_form.media }}
+{{ meublequantite_formset.media }}
+
+
+
+
+<script type="text/javascript">
+window.__admin_media_prefix__ = "{% filter escapejs %}static/admin/{% endfilter %}";
+</script>
+
+
+
+</head>
+<body>
+<form action="/devis/" method="post">
+{% csrf_token %}<a id="volume-link"></a>
+
+{{ contact_form.as_ul }}
+{{ meublequantite_formset.as_ul }}
+<label>estimated volume:</label><span id="volume-estimate">0</span>
+<input type="submit" value="Valider" />
+</form>
+</body>
+</html>
