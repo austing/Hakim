@@ -50,7 +50,7 @@ class MeublesSpinnerWidget(TextInput):
         else:
             self.attrs['class'] = ' meuble-quantite spinner'
     class Media:
-        js = ('jquery-ui-1.9.2.custom/js/jquery-1.8.3.js', 'jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js', 'js/meubles.js')
+        js = ('js/meubles.js',) #'jquery-ui-1.9.2.custom/js/jquery-1.8.3.js', 'jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js', 
 
 class MeubleQuantiteForm(ModelForm):
     class Meta:

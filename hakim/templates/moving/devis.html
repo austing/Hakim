@@ -2,40 +2,72 @@
 <head>
 <title>Démenagement particulier: Demande de devis</title>
 
-{% load adminmedia %}
-
-<link rel="stylesheet" type="text/css" href="/static/admin/css/forms.css"/>
-<link rel="stylesheet" type="text/css" href="/static/admin/css/base.css"/>
-<link rel="stylesheet" type="text/css" href="/static/admin/css/widgets.css"/>
-
-<script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
-<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
-
-<script type="text/javascript" src="/admin/jsi18n/"></script>
-<script type="text/javascript" src="/static/admin/js/core.js"></script>
-<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
-
-{{ contact_form.media }}
-{{ meublequantite_formset.media }}
 
 
 
+<link href="/static/css/devis.css" rel="stylesheet" type="text/css">
+
+        {%comment%}
+            <script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
+            <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+        {%endcomment%}
+
+<script type="text/javascript"  src="/static/js/jquery-1.9.0.min.js"></script>
+
+<script type="text/javascript" src="/static/js/jquery.infieldlabel.js"></script>
 
 <script type="text/javascript">
-window.__admin_media_prefix__ = "{% filter escapejs %}static/admin/{% endfilter %}";
+$(document).ready(function() {
+  $("#contact_form label[for]").inFieldLabels({fadeDuration:0,fadeOpacity:0.3});
+});
 </script>
+
+{{ meublequantite_formset.media }}
+
+        {% comment%}
+            <script type="text/javascript" src="/static/admin/js/core.js"></script>
+            <script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+            
+            {{ contact_form.media }}
+            
+            <script type="text/javascript">
+            window.__admin_media_prefix__ = "{% filter escapejs %}static/admin/{% endfilter %}";
+            </script>
+        {% endcomment%}
+
+
+
+
+
 
 
 
 </head>
 <body>
 <form action="/devis/" method="post">
+<ul>
 {% csrf_token %}<a id="volume-link"></a>
 
+<div id="contact_form">
+<div id="coordonnees">
+    <li>
+        {{ contact_form.civilite.errors }}
+        {{ contact_form.civilite }}
+
+        {{ contact_form.prenom.errors }}
+        {{ contact_form.prenom.label_tag }}{{ contact_form.prenom }}
+
+        {{ contact_form.nom.errors }}
+        {{ contact_form.nom.label_tag }}{{ contact_form.nom }}
+    </li>
+
+</div>
 {{ contact_form.as_ul }}
+</div>
 {{ meublequantite_formset.as_ul }}
 <label>estimated volume:</label><span id="volume-estimate">0</span>
 <input type="submit" value="Valider" />
+</ul>
 </form>
 </body>
 </html>

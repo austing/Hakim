@@ -9,6 +9,9 @@ class Chambre(models.Model):
     nom = models.CharField(max_length=200)
     slug = AutoSlugField('slug', max_length=50, unique=True, populate_from=('nom',))
 
+    def __unicode__(self):
+        return self.nom
+
 class Meuble(models.Model):
     nom = models.CharField(max_length=200)
     nom_pluriel = models.CharField(max_length=200)
@@ -26,20 +29,21 @@ class MeubleQuantite(models.Model):
 class CommandeParticulier(models.Model):
     nom = models.CharField(max_length=200)
     prenom = models.CharField(max_length=200)
-    civilite = models.CharField(max_length=5)
+    CIVILITE_CHOICES = (("Blanc","Civilité"),("M.","M."),("Mme","Mme"),)
+    civilite = models.CharField(choices=CIVILITE_CHOICES, max_length=5, null=False, blank=False, default="Blanc")
     mel = models.EmailField()
     origine_ville = models.CharField(max_length=200)
     origine_addresse = models.CharField(blank=True,max_length=200)
     origine_code = models.CharField(max_length=200)
-    origine_etages_sans_ascenseur = models.IntegerField(default=0)
+    origine_etages_sans_ascenseur = models.IntegerField()
     destination_ville = models.CharField(max_length=200)
     destination_addresse = models.CharField(blank=True,max_length=200)
     destination_code = models.CharField(max_length=200)
-    destination_etages_sans_ascenseur = models.IntegerField(default=0)
+    destination_etages_sans_ascenseur = models.IntegerField()
     date_chargement = models.DateField()
     date_dechargement = models.DateField()
     meubles = models.ManyToManyField(MeubleQuantite)
-    volume = models.DecimalField(blank=True, null=True, decimal_places=2, max_digits=9, default=0)
+    volume = models.DecimalField(blank=True, null=True, decimal_places=2, max_digits=9, )
     DEVIS = 'DV'
     FINALISE = 'FN'
     ETAT_CHOICES = (
