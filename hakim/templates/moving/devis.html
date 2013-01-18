@@ -13,6 +13,7 @@
         {%endcomment%}
 
 <script type="text/javascript"  src="/static/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript"  src="/static/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
 
 <script type="text/javascript" src="/static/js/jquery.infieldlabel.js"></script>
 
@@ -49,7 +50,7 @@ $(document).ready(function() {
 {% csrf_token %}<a id="volume-link"></a>
 
 <div id="contact_form">
-<div id="coordonnees">
+<ul id="coordonnees">
     <li>
         {{ contact_form.civilite.errors }}
         {{ contact_form.civilite }}
@@ -60,9 +61,48 @@ $(document).ready(function() {
         {{ contact_form.nom.errors }}
         {{ contact_form.nom.label_tag }}{{ contact_form.nom }}
     </li>
+    <li>
+        {{ contact_form.mel.errors }}
+        {{ contact_form.mel.label_tag }}{{ contact_form.mel }}
+</ul>
+<ul id="demenagement">
+    <li>
+        {{ contact_form.origine_ville.errors }}
+        {{ contact_form.origine_ville.label_tag }}{{ contact_form.origine_ville }}
 
-</div>
-{{ contact_form.as_ul }}
+        {{ contact_form.origine_code.errors }}
+        {{ contact_form.origine_code.label_tag }}{{ contact_form.origine_code }}
+
+        {{ contact_form.origine_etages_sans_ascenseur.errors }}
+        {{ contact_form.origine_etages_sans_ascenseur.label_tag }}{{ contact_form.origine_etages_sans_ascenseur }}        
+    </li>
+    <li>
+        {{ contact_form.destination_ville.errors }}
+        {{ contact_form.destination_ville.label_tag }}{{ contact_form.destination_ville }}
+
+        {{ contact_form.destination_code.errors }}
+        {{ contact_form.destination_code.label_tag }}{{ contact_form.destination_code }}
+        
+
+        {{ contact_form.destination_etages_sans_ascenseur.errors }}
+        {{ contact_form.destination_etages_sans_ascenseur.label_tag }}{{ contact_form.destination_etages_sans_ascenseur }}   
+    </li>
+</ul>
+<ul id="calendrier">
+    <li>
+        {{ contact_form.date_chargement.errors }}
+        {{ contact_form.date_chargement.label_tag }}{{ contact_form.date_chargement }}
+        {{ contact_form.date_dechargement.errors }}
+        {{ contact_form.date_dechargement.label_tag }}{{ contact_form.date_dechargement }}
+    </li>
+</ul>
+<ul id="volume">
+    <li>
+        {{ contact_form.volume.errors }}
+        {{ contact_form.volume.label_tag }}{{ contact_form.volume }}
+    </li>
+</ul>
+
 </div>
 {{ meublequantite_formset.as_ul }}
 <label>estimated volume:</label><span id="volume-estimate">0</span>
