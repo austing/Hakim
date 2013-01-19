@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from django.forms import ModelForm, Form
 from django.forms.models import modelform_factory, BaseModelFormSet
 from django.forms.widgets import HiddenInput, TextInput
@@ -7,6 +10,17 @@ from django.utils.safestring import mark_safe
 from django.forms.formsets import BaseFormSet, formset_factory
 from models import Chambre
 
+
+class SpinnerWidget(TextInput):
+    def __init__(self, *args, **kwargs):
+        super(SpinnerWidget, self).__init__(*args, **kwargs)
+        if 'class' in self.attrs:
+            self.attrs['class'] += ' spinner'
+        else:
+            self.attrs['class'] = ' spinner'
+#    class Media:
+#        js = ('js/spinner.js',) #'jquery-ui-1.9.2.custom/js/jquery-1.8.3.js', 'jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js', 
+
 class ParticulierContactForm(ModelForm):
     class Meta:
         model = CommandeParticulier
@@ -15,6 +29,8 @@ class ParticulierContactForm(ModelForm):
         super(ParticulierContactForm, self).__init__(*args, **kwargs)
         self.fields['date_chargement'].widget = AdminDateWidget()
         self.fields['date_dechargement'].widget = AdminDateWidget()
+        self.fields['origine_etages_sans_ascenseur'].widget = SpinnerWidget();
+        self.fields['destination_etages_sans_ascenseur'].widget = SpinnerWidget();
 
 
 initial_meublequantite = []
@@ -42,6 +58,8 @@ class MeubleHiddenInput(HiddenInput):
 # static/jquery-ui-1.9.2.custom/js/jquery-1.8.3.js
 # static/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js
 
+
+
 class MeublesSpinnerWidget(TextInput):
     def __init__(self, *args, **kwargs):
         super(MeublesSpinnerWidget, self).__init__(*args, **kwargs)
@@ -53,6 +71,7 @@ class MeublesSpinnerWidget(TextInput):
         js = ('js/meubles.js',) #'jquery-ui-1.9.2.custom/js/jquery-1.8.3.js', 'jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js', 
 
 class MeubleQuantiteForm(ModelForm):
+    error_css_class = "error"
     class Meta:
         model = MeubleQuantite
     def __init__(self, *args, **kwargs):
@@ -71,22 +90,23 @@ class MeubleQuantiteForm(ModelForm):
         self.fields['meuble'].widget = MeubleHiddenInput()
 
 class MeubleFormSet(BaseModelFormSet):
+    error_css_class = "error"
     def __init__(self, *args, **kwargs):
         super(MeubleFormSet, self).__init__(*args, **kwargs)
         self.chambres = Chambre.objects.all()
     def as_ul(self):
         current_chambre = None
-        render = '<ul>'
+        render = '<ul class="chambres">'
         for form in self:
             chambre = form.chambre
             if chambre and chambre.id != current_chambre:
                 if current_chambre:
                     render = render + "</ul></li>"
-                render = render + "<li class=\"chambre\">%s<ul>" % chambre.nom.title()
+                render = render + u"<li class=\"chambre\"><span class='toggle-triangle'>▼</span> <a class='togglelink'>%s</a></li><ul class='meubles'>" % chambre.nom.title()
                 current_chambre = chambre.id
             render = render + form.as_ul()
         if current_chambre:
-            render = render + "</ul></li>"
+            render = render + "</ul>"
         render = render + "</ul>"
         return mark_safe(u'\n'.join([unicode(self.management_form), render]))
 
