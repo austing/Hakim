@@ -210,7 +210,7 @@ display: inline-block;
 position: relative;
 padding: 0px;
 padding-right: 2px;
-padding-bottom: 15px;
+padding-bottom: 10px;
 }
 
 .break
@@ -563,3 +563,36 @@ font:20px "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
 .ui-datepicker-title {
 font-weight: bold;
 }
+
+.fieldspan {
+display: inline-block;
+margin: 0;
+padding: 0;
+}
+
+.fieldspan label {
+position: absolute;
+}
+
+#horizontal-200px {
+width: 200px;
+display: inline-block;
+}
+
+
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+	background-color: rgba(255,255,255,0.8);
+font:20px "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+color: #442205;
+
+}
+body .ui-tooltip {
+	outline: 3px rgba(0,0,0,0.07) solid;
+}
+

@@ -12,7 +12,7 @@
 <script type="text/javascript"  src="/static/js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript"  src="/static/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
 
-{{ meublequantite_formset.media }}
+<script type="text/javascript" src="/static/js/meubles.js"></script>
 
 
 <script type="text/javascript" src="/static/js/jquery.infieldlabel.js"></script>
@@ -25,6 +25,8 @@ $(document).ready(function() {
   
   $( "#id_date_chargement" ).datepicker({ dateFormat: 'dd/mm/yy' });
   $( "#id_date_dechargement" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  
+  $(document).tooltip({show: { duration: 80 }, position: {my: "left+15 top-10", at: "left bottom", collision: "flipfit"}});
 $(window).load(function() {
    $('#ui-datepicker-div').addClass('jquerystyles');
 });
@@ -55,35 +57,38 @@ $(window).load(function() {
 <h3>1. Vos coordonnées</h3>
 <ul id="coordonnees">
     <li>
-        <span class="null {% if contact_form.civilite.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.civilite.errors %}errors{%endif%}">
         {{ contact_form.civilite }}</span>
     </li>
     <li>
-        <span class="null {% if contact_form.prenom.errors %}errors{%endif%}">
-        {{ contact_form.prenom.label_tag }}{{ contact_form.prenom }}</span>
-
-        <span class="null {% if contact_form.nom.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.nom.errors %}errors{%endif%}" {% if contact_form.nom.errors %}title="{{contact_form.nom.errors.as_text}}"{% endif %}>
         {{ contact_form.nom.label_tag }}{{ contact_form.nom }}</span>
+        <span class="fieldspan {% if contact_form.prenom.errors %}errors{%endif%}" {% if contact_form.prenom.errors %}title="{{contact_form.prenom.errors.as_text}}"{% endif %}>
+        {{ contact_form.prenom.label_tag }}{{ contact_form.prenom }}</span>
+    </li>
+    <li>
+        <span class="fieldspan {% if contact_form.phone_domicile.errors %}errors{%endif%}" {% if contact_form.phone_domicile.errors %}title="{{contact_form.phone_domicile.errors.as_text}}"{% endif %}>
+        {{ contact_form.phone_domicile.label_tag }}{{ contact_form.phone_domicile }}</span>
+        <span class="fieldspan {% if contact_form.phone_cell.errors %}errors{%endif%}" {% if contact_form.phone_cell.errors %}title="{{contact_form.phone_cell.errors.as_text}}"{% endif %}>
+        {{ contact_form.phone_cell.label_tag }}{{ contact_form.phone_cell }}</span>
     </li>
     <div class="break"></div>
     <li>
-        <span class="null {% if contact_form.mel.errors %}errors{%endif%}">
-        {{ contact_form.mel.label_tag }}{{ contact_form.mel }}</span>
-
-        <span class="null {% if contact_form.phone.errors %}errors{%endif%}">
-        {{ contact_form.phone.label_tag }}{{ contact_form.phone }}</span>
+        <span class="fieldspan {% if contact_form.mail.errors %}errors{%endif%}" {% if contact_form.mail.errors %}title="{{contact_form.mail.errors.as_text}}"{% endif %}>
+        {{ contact_form.mail.label_tag }}{{ contact_form.mail }}</span>
+        <div id="horizontal-200px"> </div>
     </li>
 </ul>
 
-<h3>2. La date de votre déménagement</h3>
+<h3>2. Dates de votre déménagement</h3>
 <ul id="calendrier">
     <li>
-        <span class="null {% if contact_form.date_chargement.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.date_chargement.errors %}errors{%endif%}" {% if contact_form.date_chargement.errors %}title="{{contact_form.date_chargement.errors.as_text}}"{% endif %}>
         {{ contact_form.date_chargement.label_tag }}{{ contact_form.date_chargement }}</span>
     </li><li class="arrow">
         ➡
     </li><li>
-        <span class="null {% if contact_form.date_dechargement.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.date_dechargement.errors %}errors{%endif%}" {% if contact_form.date_dechargement.errors %}title="{{contact_form.date_dechargement.errors.as_text}}"{% endif %}>
         {{ contact_form.date_dechargement.label_tag }}{{ contact_form.date_dechargement }}</span>
     </li>
 </ul>
@@ -92,41 +97,42 @@ $(window).load(function() {
 <h5>3. Votre déménagement</h5>
 <ul id="demenagement">
     <li>
-        <span class="null {% if contact_form.origine_ville.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.origine_ville.errors %}errors{%endif%}" {% if contact_form.origine_ville.errors %}title="{{contact_form.origine_ville.errors.as_text}}"{% endif %}>
         {{ contact_form.origine_ville.label_tag }}{{ contact_form.origine_ville }}</span>
-
-        <span class="null {% if contact_form.origine_code.errors %}errors{%endif%}">
+    <div class="break"></div>
+        <span class="fieldspan {% if contact_form.origine_code.errors %}errors{%endif%}" {% if contact_form.origine_code.errors %}title="{{contact_form.origine_code.errors.as_text}}"{% endif %}>
         {{ contact_form.origine_code.label_tag }}{{ contact_form.origine_code }}</span>
-
+    <div class="break"></div>
 
         <div id="etages">Etages sans<br>ascenseur:</div>
         {{ contact_form.origine_etages_sans_ascenseur }} 
     </li>
     <li class="arrow">➡</li>
     <li>
-    <span class="null {% if contact_form.destination_ville.errors %}errors{%endif%}">{{ contact_form.destination_ville.label_tag }}{{ contact_form.destination_ville }}</span>
-
-        <span class="null {% if contact_form.destination_code.errors %}errors{%endif%}">
+    <span class="fieldspan {% if contact_form.destination_ville.errors %}errors{%endif%}" {% if contact_form.destination_ville.errors %}title="{{contact_form.destination_ville.errors.as_text}}"{% endif %}>{{ contact_form.destination_ville.label_tag }}{{ contact_form.destination_ville }}</span>
+    <div class="break"></div>
+        <span class="fieldspan {% if contact_form.destination_code.errors %}errors{%endif%}" {% if contact_form.destination_code.errors %}title="{{contact_form.destination_code.errors.as_text}}"{% endif %}>
         {{ contact_form.destination_code.label_tag }}{{ contact_form.destination_code }}</span>
-        
+    <div class="break"></div>
+    
         {{ contact_form.destination_etages_sans_ascenseur.errors }}
         {{ contact_form.destination_etages_sans_ascenseur }}
     </li>
 </ul>
 
 
-<h6>4. La volume</h6>
+<h6>4. Votre volume</h6>
 
 <ul id="volume">
     <li>
-        <span class="null {% if contact_form.volume.errors %}errors{%endif%}">
+        <span class="fieldspan {% if contact_form.volume.errors %}errors{%endif%}" {% if contact_form.volume.errors %}title="{{contact_form.volume.errors.as_text}}"{% endif %}>
         {{ contact_form.volume.label_tag }}{{ contact_form.volume }}</span>
        
 <div id="devis-option">
 Ou calculez:
 </div>
 <div id="devis">
-<label>devis:</label><span id="volume-estimate">0</span> <a id="volume-link"></a>
+<label>devis:</label><span id="volume-estimate">0</span> m<sup>3</up> <a id="volume-link"></a>
 </div>
 
     </li>

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from django.forms import ModelForm, Form
+from django.forms import ModelForm, Form, DateField
 from django.forms.models import modelform_factory, BaseModelFormSet
 from django.forms.widgets import HiddenInput, TextInput
 from django.contrib.admin.widgets import AdminDateWidget
@@ -21,7 +21,11 @@ class SpinnerWidget(TextInput):
 #    class Media:
 #        js = ('js/spinner.js',) #'jquery-ui-1.9.2.custom/js/jquery-1.8.3.js', 'jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js', 
 
+MY_DATE_FORMATS = ['%d/%m/%Y',]
+
 class ParticulierContactForm(ModelForm):
+    date_chargement = DateField(input_formats=MY_DATE_FORMATS, label=CommandeParticulier._meta.get_field_by_name('date_chargement')[0].verbose_name)
+    date_dechargement = DateField(input_formats=MY_DATE_FORMATS,label=CommandeParticulier._meta.get_field_by_name('date_dechargement')[0].verbose_name)
     class Meta:
         model = CommandeParticulier
         exclude = ('etat_de_commande','destination_addresse','origine_addresse','meubles')
@@ -92,6 +96,7 @@ class MeubleQuantiteForm(ModelForm):
 class MeubleFormSet(BaseModelFormSet):
     error_css_class = "error"
     def __init__(self, *args, **kwargs):
+        print "." # Unless I print something here, the form doesn't appear.
         super(MeubleFormSet, self).__init__(*args, **kwargs)
         self.chambres = Chambre.objects.all()
     def as_ul(self):
