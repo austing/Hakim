@@ -42,6 +42,7 @@ $(window).load(function() {
 
 
 
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 
 
 </head>
@@ -104,8 +105,13 @@ $(window).load(function() {
         {{ contact_form.origine_code.label_tag }}{{ contact_form.origine_code }}</span>
     <div class="break"></div>
 
-        <div id="etages">Etages sans<br>ascenseur:</div>
-        {{ contact_form.origine_etages_sans_ascenseur }} 
+        <div class="etages">Etages:</div>
+        {{ contact_form.origine_etages }} 
+        
+    <div class="break"></div>
+    
+        <div class="ascenseur">Ascenseur?</div>
+        {{ contact_form.ascenseur_destination }}
     </li>
     <li class="arrow">➡</li>
     <li>
@@ -115,8 +121,12 @@ $(window).load(function() {
         {{ contact_form.destination_code.label_tag }}{{ contact_form.destination_code }}</span>
     <div class="break"></div>
     
-        {{ contact_form.destination_etages_sans_ascenseur.errors }}
-        {{ contact_form.destination_etages_sans_ascenseur }}
+        <div class="etages">Etages:</div>
+        {{ contact_form.destination_etages }}
+    <div class="break"></div>
+    
+        <div class="ascenseur">Ascenseur?</div>
+        {{ contact_form.ascenseur_destination }}
     </li>
 </ul>
 

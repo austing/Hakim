@@ -33,8 +33,8 @@ class ParticulierContactForm(ModelForm):
         super(ParticulierContactForm, self).__init__(*args, **kwargs)
 #        self.fields['date_chargement'].widget = AdminDateWidget()
 #        self.fields['date_dechargement'].widget = AdminDateWidget()
-        self.fields['origine_etages_sans_ascenseur'].widget = SpinnerWidget();
-        self.fields['destination_etages_sans_ascenseur'].widget = SpinnerWidget();
+        self.fields['origine_etages'].widget = SpinnerWidget();
+        self.fields['destination_etages'].widget = SpinnerWidget();
 
 
 initial_meublequantite = []
