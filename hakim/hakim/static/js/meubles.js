@@ -36,20 +36,20 @@ $(function() {
 
     $(document).ready(function(){
             $(".chambre .togglelink").each(function(){ $(this).parent('.chambre').next("ul.meubles").toggle();
-            if($(this).prev("span.toggle-triangle").text() == "►"){
-                $(this).prev("span.toggle-triangle").text("▼")
+            if($(this).children("span.toggle-triangle:first").text() == "►"){
+                $(this).children("span.toggle-triangle:first").text("▼");
             }else{
-                $(this).prev("span.toggle-triangle").text("►")
+                $(this).children("span.toggle-triangle:first").text("►");
             }
             });
     });
 
     $( ".chambre .togglelink" ).click(function(){
         $(this).parent('.chambre').next("ul.meubles").slideToggle();
-        if($(this).prev("span.toggle-triangle").text() == "►"){
-            $(this).prev("span.toggle-triangle").text("▼")
+        if($(this).children("span.toggle-triangle:first").text() == "►"){
+            $(this).children("span.toggle-triangle:first").text("▼")
         }else{
-            $(this).prev("span.toggle-triangle").text("►")
+            $(this).children("span.toggle-triangle:first").text("►")
         }
     });
 });

@@ -27,8 +27,8 @@ class ParticulierContactForm(ModelForm):
         exclude = ('etat_de_commande','destination_addresse','origine_addresse','meubles')
     def __init__(self, *args, **kwargs):
         super(ParticulierContactForm, self).__init__(*args, **kwargs)
-        self.fields['date_chargement'].widget = AdminDateWidget()
-        self.fields['date_dechargement'].widget = AdminDateWidget()
+#        self.fields['date_chargement'].widget = AdminDateWidget()
+#        self.fields['date_dechargement'].widget = AdminDateWidget()
         self.fields['origine_etages_sans_ascenseur'].widget = SpinnerWidget();
         self.fields['destination_etages_sans_ascenseur'].widget = SpinnerWidget();
 
@@ -102,7 +102,7 @@ class MeubleFormSet(BaseModelFormSet):
             if chambre and chambre.id != current_chambre:
                 if current_chambre:
                     render = render + "</ul></li>"
-                render = render + u"<li class=\"chambre\"><span class='toggle-triangle'>▼</span> <a class='togglelink'>%s</a></li><ul class='meubles'>" % chambre.nom.title()
+                render = render + u"<li class=\"chambre\"><a class='togglelink'><span class='toggle-triangle'>▼</span> %s</a></li><ul class='meubles'>" % chambre.nom.title()
                 current_chambre = chambre.id
             render = render + form.as_ul()
         if current_chambre:

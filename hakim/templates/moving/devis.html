@@ -7,10 +7,7 @@
 
 <link href="/static/css/devis.css" rel="stylesheet" type="text/css">
 
-        {%comment%}
-            <script type="text/javascript" src="/static/admin/js/jquery.min.js"></script>
-            <script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
-        {%endcomment%}
+
 
 <script type="text/javascript"  src="/static/js/jquery-1.9.0.min.js"></script>
 <script type="text/javascript"  src="/static/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -25,22 +22,18 @@ $(document).ready(function() {
   $("#contact_form label[for]").inFieldLabels({fadeDuration:0,fadeOpacity:0.15});
   
   $('span.errors input').change(function(){$(this).parent('span.errors').removeClass('errors');});
+  
+  $( "#id_date_chargement" ).datepicker({ dateFormat: 'dd/mm/yy' });
+  $( "#id_date_dechargement" ).datepicker({ dateFormat: 'dd/mm/yy' });
+$(window).load(function() {
+   $('#ui-datepicker-div').addClass('jquerystyles');
+});
+
 });
 
 
 </script>
 
-
-        {% comment%}
-            <script type="text/javascript" src="/static/admin/js/core.js"></script>
-            <script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
-            
-            {{ contact_form.media }}
-            
-            <script type="text/javascript">
-            window.__admin_media_prefix__ = "{% filter escapejs %}static/admin/{% endfilter %}";
-            </script>
-        {% endcomment%}
 
 
 
@@ -146,8 +139,8 @@ Ou calculez:
 <div id="height-filler"></div>
 </div>
 </div>
-<div id="bottom">
- </div>
+<!--<div id="bottom">
+ </div>-->
 
 </form>
 </body>
