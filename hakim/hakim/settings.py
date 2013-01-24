@@ -153,3 +153,11 @@ LOGGING = {
         },
     }
 }
+
+try:
+    from config.local_settings import *
+except ImportError:
+    try:
+        from local_settings import *
+    except ImportError:
+        raise Exception("Couldn't find or import a local_settings file")
