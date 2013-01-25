@@ -35,7 +35,7 @@ $(function() {
     });
 
     $(document).ready(function(){
-            $(".chambre .togglelink").each(function(){ $(this).parent('.chambre').next("ul.meubles").toggle();
+            $(".chambre .togglelink").each(function(){ $(this).parent('.chambre').next("li.meubles").toggle();
             if($(this).children("span.toggle-triangle:first").text() == "►"){
                 $(this).children("span.toggle-triangle:first").text("▼");
             }else{
@@ -45,7 +45,7 @@ $(function() {
     });
 
     $( ".chambre .togglelink" ).click(function(){
-        $(this).parent('.chambre').next("ul.meubles").slideToggle();
+        $(this).parent('.chambre').next("li.meubles").slideToggle();
         if($(this).children("span.toggle-triangle:first").text() == "►"){
             $(this).children("span.toggle-triangle:first").text("▼")
         }else{

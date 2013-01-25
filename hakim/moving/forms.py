@@ -107,7 +107,7 @@ class MeubleFormSet(BaseModelFormSet):
             if chambre and chambre.id != current_chambre:
                 if current_chambre:
                     render = render + "</ul></li>"
-                render = render + u"<li class=\"chambre\"><a class='togglelink'><span class='toggle-triangle'>▼</span> %s</a></li><ul class='meubles'>" % chambre.nom.title()
+                render = render + u"<li class=\"chambre\"><a class='togglelink'><span class='toggle-triangle'>▼</span> %s</a></li><li class='meubles'><ul class='meubles'>" % chambre.nom.title()
                 current_chambre = chambre.id
             render = render + form.as_ul()
         if current_chambre:

@@ -73,7 +73,7 @@ $(window).load(function() {
         <span class="fieldspan {% if contact_form.phone_cell.errors %}errors{%endif%}" {% if contact_form.phone_cell.errors %}title="{{contact_form.phone_cell.errors.as_text}}"{% endif %}>
         {{ contact_form.phone_cell.label_tag }}{{ contact_form.phone_cell }}</span>
     </li>
-    <div class="break"></div>
+    <li class="break"></li>
     <li>
         <span class="fieldspan {% if contact_form.mail.errors %}errors{%endif%}" {% if contact_form.mail.errors %}title="{{contact_form.mail.errors.as_text}}"{% endif %}>
         {{ contact_form.mail.label_tag }}{{ contact_form.mail }}</span>
@@ -83,9 +83,9 @@ $(window).load(function() {
 
 <h3>2. Dates de votre déménagement</h3>
 <ul id="calendrier">
-    <li>
+    <li><div>
         <span class="fieldspan {% if contact_form.date_chargement.errors %}errors{%endif%}" {% if contact_form.date_chargement.errors %}title="{{contact_form.date_chargement.errors.as_text}}"{% endif %}>
-        {{ contact_form.date_chargement.label_tag }}{{ contact_form.date_chargement }}</span>
+        {{ contact_form.date_chargement.label_tag }}{{ contact_form.date_chargement }}</span></div>
     </li><li class="arrow">
         ➡
     </li><li>
@@ -111,10 +111,8 @@ $(window).load(function() {
     <div class="break"></div>
     
         <div class="ascenseur">Ascenseur?</div>
-        {{ contact_form.ascenseur_destination }}
-    </li>
-    <li class="arrow">➡</li>
-    <li>
+        {{ contact_form.ascenseur_origine }}
+    </li><li class="arrow">➡</li><li>
     <span class="fieldspan {% if contact_form.destination_ville.errors %}errors{%endif%}" {% if contact_form.destination_ville.errors %}title="{{contact_form.destination_ville.errors.as_text}}"{% endif %}>{{ contact_form.destination_ville.label_tag }}{{ contact_form.destination_ville }}</span>
     <div class="break"></div>
         <span class="fieldspan {% if contact_form.destination_code.errors %}errors{%endif%}" {% if contact_form.destination_code.errors %}title="{{contact_form.destination_code.errors.as_text}}"{% endif %}>
@@ -142,7 +140,7 @@ $(window).load(function() {
 Ou calculez:
 </div>
 <div id="devis">
-<label>devis:</label><span id="volume-estimate">0</span> m<sup>3</up> <a id="volume-link"></a>
+<label>devis:</label><span id="volume-estimate">0</span> m<sup>3</sup> <a id="volume-link"></a>
 </div>
 
     </li>
