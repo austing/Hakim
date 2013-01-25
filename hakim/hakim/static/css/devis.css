@@ -180,6 +180,8 @@ padding: 0px;
 
 #demenagement li {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 vertical-align: top;
 padding: 0px;
 text-align: right;
@@ -190,6 +192,8 @@ display: block;
 }
 #calendrier li{
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 vertical-align: middle;
 padding: 0px;
 }
@@ -205,13 +209,15 @@ font-weight: normal;
 #coordonnees {
 display: block;
 text-align: right;
-width: 510px;
-margin-left: 270px;
+width: 550px;
+margin-left: 260px;
 padding-bottom: 0px;
 }
 
 #coordonnees li{
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 position: relative;
 padding: 0px;
 padding-right: 2px;
@@ -231,6 +237,8 @@ border: none;
 
 .etages {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 text-align: left;
 font-weight: normal;
 font-size: 18px;
@@ -247,6 +255,8 @@ color: #662205;
 
 .ascenseur {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 text-align: left;
 font-weight: normal;
 font-size: 18px;
@@ -262,6 +272,8 @@ color: #662205;
 
 a.ui-spinner-button{
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 vertical-align: top;
 margin-top: 7px;
 cursor: pointer;
@@ -269,6 +281,8 @@ cursor: pointer;
 
 #devis {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 margin-left: 14px;
 }
 
@@ -353,6 +367,8 @@ padding-bottom: 0px;
 }
 form ul.meubles li {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 padding: 0;
 }
 .labelled-hidden-input-text {
@@ -589,6 +605,8 @@ font-weight: bold;
 
 .fieldspan {
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 margin: 0;
 padding: 0;
 }
@@ -601,6 +619,8 @@ position: absolute;
 #horizontal-200px {
 width: 200px;
 display: inline-block;
+        zoom: 1;
+        *display: inline;
 }
 
 
@@ -627,4 +647,10 @@ padding: 0;
 width: auto;
 position: relative;
 left: -7px;
+}
+
+#email-distancer {
+width: 200px;
+padding: 9px;
+display:inline-block
 }

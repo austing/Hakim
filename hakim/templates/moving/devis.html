@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
 <title>Démenagement particulier: Demande de devis</title>
@@ -77,7 +78,7 @@ $(window).load(function() {
     <li>
         <span class="fieldspan {% if contact_form.mail.errors %}errors{%endif%}" {% if contact_form.mail.errors %}title="{{contact_form.mail.errors.as_text}}"{% endif %}>
         {{ contact_form.mail.label_tag }}{{ contact_form.mail }}</span>
-        <div id="horizontal-200px"> </div>
+        <div id="email-distancer"> </div>
     </li>
 </ul>
 
@@ -149,7 +150,7 @@ Ou calculez:
 {{ meublequantite_formset.as_ul }}
 <h6>5. Obtenez votre devis</h6>
 
-<button type="submit" name="valider" value="Valider" />Valider</button>
+<button type="submit" name="valider" value="Valider">Valider</button>
 <div id="height-filler"></div>
 </div>
 </div>
