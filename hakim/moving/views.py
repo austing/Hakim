@@ -1,5 +1,5 @@
 from django.http import Http404, HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from models import Meuble, CommandeParticulier
 from forms import MeubleQuantiteListForm, ParticulierContactForm, MeubleQuantiteFormSet
 from django.template import RequestContext
@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from django.utils import simplejson
 from decimal import Decimal
+from django.core.urlresolvers import reverse
 
 def particulier_devis(request):
     
@@ -19,7 +20,9 @@ def particulier_devis(request):
             for meuble in meubles:
                 commande.meubles.add(meuble)
             commande.save()
-            return HttpResponseRedirect('/thanks/')
+            return render_to_response('moving/merci.html', {
+                'commande': commande,
+            }, context_instance=RequestContext(request))
     else:
         contact_form = ParticulierContactForm()
         meublequantite_formset = MeubleQuantiteListForm
@@ -29,6 +32,9 @@ def particulier_devis(request):
         'meublequantite_formset': meublequantite_formset
     }, context_instance=RequestContext(request))
 
+def index(request):
+    return render_to_response('moving/index.html', {
+    }, context_instance=RequestContext(request))
 
 
 @csrf_exempt

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>Démenagement particulier: Demande de devis</title>
+
+
+
+
+<link href="/static/css/devis.css" rel="stylesheet" type="text/css">
+
+
+
+<script type="text/javascript"  src="/static/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript"  src="/static/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+<div id="top">
+ </div>
+
+
+<div id="thanks-holder">
+<h3>Confirmation</h3>
+    <p>
+        Cher {% if commande.civilite and commande.civilite != 'Blanc' %}{{commande.civilite}}{% else %}{% if commande.prenom %}{{commande.prenom}}{% endif %}{% endif %} {{commande.nom}},
+    </p>
+    <p>
+        Comme suite à votre demande, notre équipe va étudier votre projet de démenagement afin de vous établir sous 24 heures un devis personnalisé.
+    </p>
+    <p>
+    Nous vous remercions de votre confiance et vous souhaitons un excellent journée.
+    </p>
+    <p>Guillaume Macouille<br>
+    Directeur Commercial, DEMETRANS</p>
+</div>
+
+<div id="info-holder">
+<p>
+DEMETRANS vous propose une gamme complète de prestations  du déménagement de particulier au déménagement de professionnel  pour transporter vos biens sur tout le territoire national.
+</p>
+<p>
+Grâce à une structure solide, des moyens performants et une équipe de professionnels, DEMETRANS est en mesure d’assurer tous types de déménagements pour les particuliers et de transferts de société sur toute la France.
+</p>
+<p id="contact-info">
+Déménagements DEMETRANS<br>
+1, petite rue du Roulet – 69100 VILLEURBANNE<br>
+Téléphone : +33(0)4 72 04 30 61<br>
+Mobile : 06 06 61 26 84<br>
+Email : demetrans@rocketmail.com<br>
+</p>
+
+</div>
+</body>
+</html>

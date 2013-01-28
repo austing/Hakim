@@ -13,9 +13,9 @@ $(function() {
     });
     $( ".meuble-quantite.spinner" ).spinner({ 
         min: 0,
-        stop: function( event, ui ){
+/*        stop: function( event, ui ){
             $( document.activeElement ).blur().focus();
-        },
+        },*/
         change: function( event, ui ){
             form = $(this).closest("form");
             $.post("/calculate_volume/", form.serialize(), function(data){
