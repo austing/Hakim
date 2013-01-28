@@ -5,7 +5,7 @@ from django.forms import ModelForm, Form, DateField
 from django.forms.models import modelform_factory, BaseModelFormSet
 from django.forms.widgets import HiddenInput, TextInput
 from django.contrib.admin.widgets import AdminDateWidget
-from models import CommandeParticulier, MeubleQuantite, Meuble
+from models import CommandeParticulier, CommandeProfessionnel, MeubleQuantite, Meuble
 from django.utils.safestring import mark_safe
 from django.forms.formsets import BaseFormSet, formset_factory
 from models import Chambre
@@ -31,6 +31,19 @@ class ParticulierContactForm(ModelForm):
         exclude = ('etat_de_commande','destination_addresse','origine_addresse','meubles')
     def __init__(self, *args, **kwargs):
         super(ParticulierContactForm, self).__init__(*args, **kwargs)
+#        self.fields['date_chargement'].widget = AdminDateWidget()
+#        self.fields['date_dechargement'].widget = AdminDateWidget()
+        self.fields['origine_etages'].widget = SpinnerWidget();
+        self.fields['destination_etages'].widget = SpinnerWidget();
+
+class ProfessionnelContactForm(ModelForm):
+    date_chargement = DateField(input_formats=MY_DATE_FORMATS, label=CommandeParticulier._meta.get_field_by_name('date_chargement')[0].verbose_name)
+    date_dechargement = DateField(input_formats=MY_DATE_FORMATS,label=CommandeParticulier._meta.get_field_by_name('date_dechargement')[0].verbose_name)
+    class Meta:
+        model = CommandeProfessionnel
+        exclude = ('etat_de_commande','destination_addresse','origine_addresse','meubles')
+    def __init__(self, *args, **kwargs):
+        super(ProfessionnelContactForm, self).__init__(*args, **kwargs)
 #        self.fields['date_chargement'].widget = AdminDateWidget()
 #        self.fields['date_dechargement'].widget = AdminDateWidget()
         self.fields['origine_etages'].widget = SpinnerWidget();
@@ -107,7 +120,7 @@ class MeubleFormSet(BaseModelFormSet):
             if chambre and chambre.id != current_chambre:
                 if current_chambre:
                     render = render + "</ul></li>"
-                render = render + u"<li class=\"chambre\"><a class='togglelink'><span class='toggle-triangle'>▼</span> %s</a></li><li class='meubles'><ul class='meubles'>" % chambre.nom.title()
+                render = render + u"<li class=\"chambre\"><a class='togglelink'><span class='toggle-triangle'>▼</span> %s</a></li><li class='meubles'><ul class='meubles'>" % chambre.nom.capitalize()
                 current_chambre = chambre.id
             render = render + form.as_ul()
         if current_chambre:

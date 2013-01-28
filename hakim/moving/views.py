@@ -1,7 +1,7 @@
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
-from models import Meuble, CommandeParticulier
-from forms import MeubleQuantiteListForm, ParticulierContactForm, MeubleQuantiteFormSet
+from models import Meuble, CommandeParticulier, CommandeProfessionnel
+from forms import MeubleQuantiteListForm, ParticulierContactForm, MeubleQuantiteFormSet, ProfessionnelContactForm
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
@@ -30,6 +30,28 @@ def particulier_devis(request):
     return render_to_response('moving/devis.html', {
         'contact_form': contact_form,
         'meublequantite_formset': meublequantite_formset
+    }, context_instance=RequestContext(request))
+
+def professionnel_devis(request):
+    if request.method == 'POST':
+        contact_form = ProfessionnelContactForm(request.POST)
+#        meublequantite_formset = MeubleQuantiteFormSet(request.POST)
+        if contact_form.is_valid():# and meublequantite_formset.is_valid(): 
+#            meubles = meublequantite_formset.save()
+            commande = contact_form.save()
+#            for meuble in meubles:
+#                commande.meubles.add(meuble)
+            commande.save()
+            return render_to_response('moving/merci.html', {
+                'commande': commande,
+            }, context_instance=RequestContext(request))
+    else:
+        contact_form = ProfessionnelContactForm()
+#        meublequantite_formset = MeubleQuantiteListForm
+
+    return render_to_response('moving/devis_professionnel.html', {
+        'contact_form': contact_form,
+#        'meublequantite_formset': meublequantite_formset
     }, context_instance=RequestContext(request))
 
 def index(request):
