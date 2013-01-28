@@ -1,0 +1,1163 @@
+[
+    {
+        "pk": 1, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Salon", 
+            "slug": "salon"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Cuisine", 
+            "slug": "cuisine"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Chambre", 
+            "slug": "chambre"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Salle de bain", 
+            "slug": "salle-de-bain"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "D\u00e9barras", 
+            "slug": "debarras"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Grenier et cave", 
+            "slug": "grenier-et-cave"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Garage", 
+            "slug": "garage"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Jardin", 
+            "slug": "jardin"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "moving.chambre", 
+        "fields": {
+            "nom": "Entr\u00e9e", 
+            "slug": "entree"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.34", 
+            "nom": "banc", 
+            "chambre": 10, 
+            "slug": "banc", 
+            "nom_pluriel": "bancs"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.8", 
+            "nom": "armoire", 
+            "chambre": 10, 
+            "slug": "armoire", 
+            "nom_pluriel": "armoires"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.34", 
+            "nom": "banc", 
+            "chambre": 10, 
+            "slug": "banc-2", 
+            "nom_pluriel": "bancs"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.15", 
+            "nom": "buffet", 
+            "chambre": 10, 
+            "slug": "buffet", 
+            "nom_pluriel": "buffets"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.26", 
+            "nom": "chaise", 
+            "chambre": 10, 
+            "slug": "chaise", 
+            "nom_pluriel": "chaises"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "\u00e9tag\u00e8re", 
+            "chambre": 10, 
+            "slug": "etagere", 
+            "nom_pluriel": "\u00e9tag\u00e8res"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.5", 
+            "nom": "fauteuil", 
+            "chambre": 10, 
+            "slug": "fauteuil", 
+            "nom_pluriel": "fauteuils"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.27", 
+            "nom": "lampadaire", 
+            "chambre": 10, 
+            "slug": "lampadaire", 
+            "nom_pluriel": "lampadaires"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.05", 
+            "nom": "lustre", 
+            "chambre": 10, 
+            "slug": "lustre", 
+            "nom_pluriel": "lustres"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.45", 
+            "nom": "meuble \u00e0 chaussures", 
+            "chambre": 10, 
+            "slug": "meuble-a-chaussures", 
+            "nom_pluriel": "meubles \u00e0 chaussures"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.35", 
+            "nom": "meuble t\u00e9l\u00e9phone", 
+            "chambre": 10, 
+            "slug": "meuble-telephone", 
+            "nom_pluriel": "meubles t\u00e9l\u00e9phones"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.05", 
+            "nom": "plante en pot", 
+            "chambre": 10, 
+            "slug": "plante-en-pot", 
+            "nom_pluriel": "plantes en pot"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.25", 
+            "nom": "tableau", 
+            "chambre": 10, 
+            "slug": "tableau", 
+            "nom_pluriel": "tableaux"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "cong\u00e9lateur", 
+            "chambre": 3, 
+            "slug": "congelateur", 
+            "nom_pluriel": "cong\u00e9lateurs"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.4", 
+            "nom": "four", 
+            "chambre": 3, 
+            "slug": "four", 
+            "nom_pluriel": "fours"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.2", 
+            "nom": "hotte", 
+            "chambre": 3, 
+            "slug": "hotte", 
+            "nom_pluriel": "hottes"
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.46", 
+            "nom": "lave vaisselle", 
+            "chambre": 3, 
+            "slug": "lave-vaisselle", 
+            "nom_pluriel": "lave vaisselle"
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.08", 
+            "nom": "micro-onde", 
+            "chambre": 3, 
+            "slug": "micro-onde", 
+            "nom_pluriel": "micro-ondes"
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.05", 
+            "nom": "plaque de cuisson", 
+            "chambre": 3, 
+            "slug": "plaque-de-cuisson", 
+            "nom_pluriel": "plaques de cuisson"
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "piano de cuisson", 
+            "chambre": 3, 
+            "slug": "piano-de-cuisson", 
+            "nom_pluriel": "pianos de cuisson"
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.02", 
+            "nom": "plan de travail", 
+            "chambre": 3, 
+            "slug": "plan-de-travail", 
+            "nom_pluriel": "plans de travail"
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.7", 
+            "nom": "r\u00e9frig\u00e9rateur", 
+            "chambre": 3, 
+            "slug": "refrigerateur", 
+            "nom_pluriel": "r\u00e9frig\u00e9rateurs"
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.5", 
+            "nom": "r\u00e9frig\u00e9rateur (top)", 
+            "chambre": 3, 
+            "slug": "refrigerateur-top", 
+            "nom_pluriel": "r\u00e9frig\u00e9rateurs (top)"
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "r\u00e9frig\u00e9rateur am\u00e9ricain", 
+            "chambre": 3, 
+            "slug": "refrigerateur-americain", 
+            "nom_pluriel": "r\u00e9frig\u00e9rateurs am\u00e9ricains"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "aquarium", 
+            "chambre": 1, 
+            "slug": "aquarium", 
+            "nom_pluriel": "aquariums"
+        }
+    }, 
+    {
+        "pk": 26, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "2", 
+            "nom": "biblioth\u00e8que", 
+            "chambre": 1, 
+            "slug": "bibliotheque", 
+            "nom_pluriel": "biblioth\u00e8ques"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.85", 
+            "nom": "buffet", 
+            "chambre": 1, 
+            "slug": "buffet-2", 
+            "nom_pluriel": "buffets"
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.8", 
+            "nom": "bureau", 
+            "chambre": 1, 
+            "slug": "bureau", 
+            "nom_pluriel": "bureaux"
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.35", 
+            "nom": "canap\u00e9 2 places", 
+            "chambre": 1, 
+            "slug": "canape-2-places", 
+            "nom_pluriel": "canap\u00e9s 2 places"
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.85", 
+            "nom": "canap\u00e9 3 places", 
+            "chambre": 1, 
+            "slug": "canape-3-places", 
+            "nom_pluriel": "canap\u00e9s 3 places"
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "3.3", 
+            "nom": "canap\u00e9 d'angle", 
+            "chambre": 1, 
+            "slug": "canape-dangle", 
+            "nom_pluriel": "canap\u00e9s d'angle"
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.26", 
+            "nom": "chaise", 
+            "chambre": 1, 
+            "slug": "chaise-2", 
+            "nom_pluriel": "chaises"
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.06", 
+            "nom": "enceinte hifi", 
+            "chambre": 1, 
+            "slug": "enceinte-hifi", 
+            "nom_pluriel": "enceintes hifis"
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "\u00e9tag\u00e8res", 
+            "chambre": 1, 
+            "slug": "etageres", 
+            "nom_pluriel": "\u00e9tag\u00e8res"
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.5", 
+            "nom": "fauteuil", 
+            "chambre": 1, 
+            "slug": "fauteuil-2", 
+            "nom_pluriel": "fauteuils"
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "home cin\u00e9ma", 
+            "chambre": 1, 
+            "slug": "home-cinema", 
+            "nom_pluriel": "home cin\u00e9mas"
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.27", 
+            "nom": "lampadaire", 
+            "chambre": 1, 
+            "slug": "lampadaire-2", 
+            "nom_pluriel": "lampadaires"
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.05", 
+            "nom": "lustre", 
+            "chambre": 1, 
+            "slug": "lustre-2", 
+            "nom_pluriel": "lustres"
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.02", 
+            "nom": "lecteur VHS/DVD/Console", 
+            "chambre": 1, 
+            "slug": "lecteur-vhsdvdconsole", 
+            "nom_pluriel": "lecteurs VHS/DVD/Console"
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "meuble d'angle", 
+            "chambre": 1, 
+            "slug": "meuble-dangle", 
+            "nom_pluriel": "meubles d'angle"
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.55", 
+            "nom": "TV", 
+            "chambre": 1, 
+            "slug": "tv", 
+            "nom_pluriel": "TVs"
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.25", 
+            "nom": "ordinateur", 
+            "chambre": 1, 
+            "slug": "ordinateur", 
+            "nom_pluriel": "ordinateurs"
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.05", 
+            "nom": "plante en pot", 
+            "chambre": 1, 
+            "slug": "plante-en-pot-2", 
+            "nom_pluriel": "plantes en pot"
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "4.6", 
+            "nom": "piano \u00e0 queue", 
+            "chambre": 1, 
+            "slug": "piano-a-queue", 
+            "nom_pluriel": "pianos \u00e0 queue"
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "piano droit", 
+            "chambre": 1, 
+            "slug": "piano-droit", 
+            "nom_pluriel": "pianos droits"
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1", 
+            "nom": "table \u00e0 manger", 
+            "chambre": 1, 
+            "slug": "table-a-manger", 
+            "nom_pluriel": "table \u00e0 manger"
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.25", 
+            "nom": "table basse", 
+            "chambre": 1, 
+            "slug": "table-basse", 
+            "nom_pluriel": "tables basses"
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "3.2", 
+            "nom": "table billards", 
+            "chambre": 1, 
+            "slug": "table-billards", 
+            "nom_pluriel": "table billards"
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.25", 
+            "nom": "tableau", 
+            "chambre": 1, 
+            "slug": "tableau-2", 
+            "nom_pluriel": "tableaux"
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1", 
+            "nom": "table \u00e0 manger", 
+            "chambre": 1, 
+            "slug": "table-a-manger-2", 
+            "nom_pluriel": "table \u00e0 manger"
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "armoire 2 portes", 
+            "chambre": 4, 
+            "slug": "armoire-2-portes", 
+            "nom_pluriel": "armoires 2 portes"
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.8", 
+            "nom": "armoire 3 portes", 
+            "chambre": 4, 
+            "slug": "armoire-3-portes", 
+            "nom_pluriel": "armoires 3 portes"
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.8", 
+            "nom": "bureau", 
+            "chambre": 4, 
+            "slug": "bureau-2", 
+            "nom_pluriel": "bureaux"
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.26", 
+            "nom": "chaise", 
+            "chambre": 4, 
+            "slug": "chaise-3", 
+            "nom_pluriel": "chaises"
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.11", 
+            "nom": "chevet", 
+            "chambre": 4, 
+            "slug": "chevet", 
+            "nom_pluriel": "chevets"
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.25", 
+            "nom": "coiffeuse", 
+            "chambre": 4, 
+            "slug": "coiffeuse", 
+            "nom_pluriel": "coiffeuses"
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.65", 
+            "nom": "commode", 
+            "chambre": 4, 
+            "slug": "commode", 
+            "nom_pluriel": "commodes"
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.27", 
+            "nom": "lampadaire", 
+            "chambre": 4, 
+            "slug": "lampadaire-3", 
+            "nom_pluriel": "lampadaires"
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.8", 
+            "nom": "lit", 
+            "chambre": 4, 
+            "slug": "lit", 
+            "nom_pluriel": "lits"
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.7", 
+            "nom": "lit 2 places", 
+            "chambre": 4, 
+            "slug": "lit-2-places", 
+            "nom_pluriel": "lits 2 places"
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.35", 
+            "nom": "lit canap\u00e9", 
+            "chambre": 4, 
+            "slug": "lit-canape", 
+            "nom_pluriel": "lit canap\u00e9"
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.25", 
+            "nom": "tableau", 
+            "chambre": 4, 
+            "slug": "tableau-3", 
+            "nom_pluriel": "tableaux"
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.35", 
+            "nom": "tapis", 
+            "chambre": 4, 
+            "slug": "tapis", 
+            "nom_pluriel": "tapis"
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.65", 
+            "nom": "lit b\u00e9b\u00e9", 
+            "chambre": 4, 
+            "slug": "lit-bebe", 
+            "nom_pluriel": "lits b\u00e9b\u00e9"
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.15", 
+            "nom": "bac \u00e0 linge", 
+            "chambre": 5, 
+            "slug": "bac-a-linge", 
+            "nom_pluriel": "bacs \u00e0 linge"
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.63", 
+            "nom": "lave linge", 
+            "chambre": 5, 
+            "slug": "lave-linge", 
+            "nom_pluriel": "lave linge"
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.05", 
+            "nom": "miroir", 
+            "chambre": 5, 
+            "slug": "miroir", 
+            "nom_pluriel": "miroirs"
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.63", 
+            "nom": "s\u00e8che linge", 
+            "chambre": 5, 
+            "slug": "seche-linge", 
+            "nom_pluriel": "s\u00e8che linge"
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.63", 
+            "nom": "table \u00e0 langer", 
+            "chambre": 5, 
+            "slug": "table-a-langer", 
+            "nom_pluriel": "table \u00e0 langer"
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.2", 
+            "nom": "tabouret", 
+            "chambre": 5, 
+            "slug": "tabouret", 
+            "nom_pluriel": "tabourets"
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.02", 
+            "nom": "boite archive", 
+            "chambre": 6, 
+            "slug": "boite-archive", 
+            "nom_pluriel": "boites archive"
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.3", 
+            "nom": "climatiseur mobile", 
+            "chambre": 6, 
+            "slug": "climatiseur-mobile", 
+            "nom_pluriel": "climatiseurs mobiles"
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.27", 
+            "nom": "lampe halog\u00e8ne", 
+            "chambre": 6, 
+            "slug": "lampe-halogene", 
+            "nom_pluriel": "lampes halog\u00e8nes"
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.42", 
+            "nom": "lit pliant", 
+            "chambre": 6, 
+            "slug": "lit-pliant", 
+            "nom_pluriel": "lits pliants"
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.06", 
+            "nom": "livres en carton", 
+            "chambre": 6, 
+            "slug": "livres-en-carton", 
+            "nom_pluriel": "livres en carton"
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.5", 
+            "nom": "meuble de rangement", 
+            "chambre": 6, 
+            "slug": "meuble-de-rangement", 
+            "nom_pluriel": "meubles de rangement"
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "2", 
+            "nom": "garde-robe", 
+            "chambre": 6, 
+            "slug": "garde-robe", 
+            "nom_pluriel": "garde-robe"
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.05", 
+            "nom": "caisse \u00e0 outils", 
+            "chambre": 6, 
+            "slug": "caisse-a-outils", 
+            "nom_pluriel": "caisse \u00e0 outils"
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.18", 
+            "nom": "ventilateur", 
+            "chambre": 6, 
+            "slug": "ventilateur", 
+            "nom_pluriel": "ventilateurs"
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.3", 
+            "nom": "cantine", 
+            "chambre": 7, 
+            "slug": "cantine", 
+            "nom_pluriel": "cantines"
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.06", 
+            "nom": "carton", 
+            "chambre": 7, 
+            "slug": "carton", 
+            "nom_pluriel": "cartons"
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.8", 
+            "nom": "cave \u00e0 vin", 
+            "chambre": 7, 
+            "slug": "cave-a-vin", 
+            "nom_pluriel": "cave \u00e0 vin"
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.9", 
+            "nom": "mat\u00e9riel sport", 
+            "chambre": 7, 
+            "slug": "materiel-sport", 
+            "nom_pluriel": "mat\u00e9riel sport"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.6", 
+            "nom": "bicyclette", 
+            "chambre": 8, 
+            "slug": "bicyclette", 
+            "nom_pluriel": "bicyclettes"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.2", 
+            "nom": "cong\u00e9lateur", 
+            "chambre": 8, 
+            "slug": "congelateur-2", 
+            "nom_pluriel": "cong\u00e9lateurs"
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1", 
+            "nom": "jeu volumineux", 
+            "chambre": 8, 
+            "slug": "jeu-volumineux", 
+            "nom_pluriel": "jeux volumineux"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.65", 
+            "nom": "moto/scooter", 
+            "chambre": 8, 
+            "slug": "motoscooter", 
+            "nom_pluriel": "motos/scooters"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1.05", 
+            "nom": "planche \u00e0 voile", 
+            "chambre": 8, 
+            "slug": "planche-a-voile", 
+            "nom_pluriel": "planches \u00e0 voile"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.2", 
+            "nom": "sac de golf", 
+            "chambre": 8, 
+            "slug": "sac-de-golf", 
+            "nom_pluriel": "sacs de golf"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "3.3", 
+            "nom": "table de ping-pong", 
+            "chambre": 8, 
+            "slug": "table-de-ping-pong", 
+            "nom_pluriel": "tables de ping-pong"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.4", 
+            "nom": "bac \u00e0 fleur", 
+            "chambre": 9, 
+            "slug": "bac-a-fleur", 
+            "nom_pluriel": "bacs \u00e0 fleurs"
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.55", 
+            "nom": "barbecue", 
+            "chambre": 9, 
+            "slug": "barbecue", 
+            "nom_pluriel": "barbacue"
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.45", 
+            "nom": "brouette", 
+            "chambre": 9, 
+            "slug": "brouette", 
+            "nom_pluriel": "brouettes"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.55", 
+            "nom": "chaise longue", 
+            "chambre": 9, 
+            "slug": "chaise-longue", 
+            "nom_pluriel": "chaises longues"
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.15", 
+            "nom": "chaise jardin", 
+            "chambre": 9, 
+            "slug": "chaise-jardin", 
+            "nom_pluriel": "chaises jardin"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.15", 
+            "nom": "\u00e9chelle jardin", 
+            "chambre": 9, 
+            "slug": "echelle-jardin", 
+            "nom_pluriel": "\u00e9chelles jardin"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "1", 
+            "nom": "piscine portable", 
+            "chambre": 9, 
+            "slug": "piscine-portable", 
+            "nom_pluriel": "piscines portables"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.35", 
+            "nom": "portique/jeu/balan\u00e7oire", 
+            "chambre": 9, 
+            "slug": "portiquejeubalancoire", 
+            "nom_pluriel": "portique/jeu/balan\u00e7oire"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "moving.meuble", 
+        "fields": {
+            "volume": "0.2", 
+            "nom": "tondeuse", 
+            "chambre": 9, 
+            "slug": "tondeuse", 
+            "nom_pluriel": "tondeuses"
+        }
+    }
+]
